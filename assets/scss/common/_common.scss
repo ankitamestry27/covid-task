@@ -55,6 +55,8 @@ h2 {
   @include responsive(map-get($breakpoints, ipad)) { font-size: 20px; }
 }
 
+.hide { display: none; }
+
 ::-webkit-scrollbar {
   width: 10px;
   background: map-get($colors , grey-medium);

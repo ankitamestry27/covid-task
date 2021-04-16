@@ -102,6 +102,9 @@ h2 {
     h2 {
       font-size: 20px; } }
 
+.hide {
+  display: none; }
+
 ::-webkit-scrollbar {
   width: 10px;
   background: #e0e0e0; }

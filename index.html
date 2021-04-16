@@ -27,10 +27,25 @@
       <section class="filter-section">
         <div class="wrapper">
           <select name="country-list" id="countries">
+            <option value="none">Select Country</option>
             <option value="india">India</option>
             <option value="south-africa">South Africa</option>
           </select>
-          <ul class="results" id="results"></ul>
+          <!-- filter division starts here -->
+          <div class="filter">
+            <div class="wrap">
+              <ul class="header">
+                <li>Confirmed</li>
+                <li>Deaths</li>
+                <li>Recovered</li>
+                <li>Active</li>
+                <li>Date</li>
+              </ul>
+              <ul class="results" id="results"></ul>
+            </div>
+          </div>
+          <!-- filter division ends here -->
+          <img src="./assets/images/loader.gif" alt="Loader" class="loader hide" id="loaderGif">
         </div>
       </section>
     </main>
