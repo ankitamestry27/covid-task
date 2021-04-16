@@ -16,25 +16,6 @@
   box-sizing: $value;
 }
 
-@mixin box-shadow($value...) {
- -webkit-box-shadow: $value;
-  box-shadow: $value; 
-}
-
-// === Animations
-
-@mixin transition($value) {
-  -webkit-transition: $value;
-  transition: $value;
-}
-
-@mixin transform($value) {
-  -o-transform: $value;
-  -ms-transform: $value;
-  -webkit-transform: $value;
-  transform: $value;
-}
-
 // Flexbox display
 @mixin flexbox() {
   display: -webkit-box;
@@ -95,18 +76,10 @@
           align-items: $value;
 }
 
-// placeholder
-@mixin placeholder() {
-  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-   @content;
-  }
-  &::-moz-placeholder { /* Firefox 19+ */
-    @content;
-  }
-  &:-ms-input-placeholder { /* IE 10+ */
-    @content;
-  }
-  &:-moz-placeholder { /* Firefox 18- */
-    @content;
-  }
+@mixin sticky() {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
 }

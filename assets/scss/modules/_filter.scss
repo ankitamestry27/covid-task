@@ -28,7 +28,7 @@
 
 			@include responsive(map-get($breakpoints, ipad)) { font-size: 14px; }
 
-      @include responsive(map-get($breakpoints, iphone-potrait)) { 
+      @include responsive(map-get($breakpoints, iphone-potrait)) {
         padding-right: 5px;
         font-size: 10px; 
       }
@@ -37,11 +37,7 @@
 
 	.filter {
     .header-container {
-      position: -webkit-sticky;
-      position: -moz-sticky;
-      position: -o-sticky;
-      position: -ms-sticky;
-      position: sticky;
+      @include sticky();
       top: 0;
       background-image: linear-gradient(to right, map-get($colors , yellow), map-get($colors , orange));
     }

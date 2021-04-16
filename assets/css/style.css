@@ -63,7 +63,6 @@ body {
 
 .container {
   max-width: 1100px;
-  min-height: 100vh;
   width: 90%;
   padding: 45px 0;
   border: 1px solid #000;
@@ -74,6 +73,7 @@ body {
       width: 97%; } }
   @media only screen and (max-width: 767px) {
     .container {
+      min-height: 100vh;
       width: 100%;
       padding-bottom: 80px;
       border: none;
