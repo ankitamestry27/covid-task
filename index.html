@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Covid Results</title>
+  <meta name="description" lang="en" content="This page will show covide results according to the country" />
+  <meta name="keywords" lang="en" content="covid, results" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!--container starts here-->
+  <div class="container">
+    <!--header starts here-->
+    <header>
+      <div class="wrapper">
+        <h1><a href="index.html">Covid Cases</a></h1>
+      </div>
+    </header>
+    <!--header ends here-->
+    <!--main starts here-->
+    <main>
+      <section class="filter-section">
+        <div class="wrapper">
+          <select name="country-list" id="countries">
+            <option value="india">India</option>
+            <option value="south-africa">South Africa</option>
+          </select>
+          <ul class="results" id="results"></ul>
+        </div>
+      </section>
+    </main>
+    <!--main ends here-->
+  </div>
+  <!--container ends here-->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
