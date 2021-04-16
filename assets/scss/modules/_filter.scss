@@ -1,0 +1,49 @@
+.filter-section {
+  %list {
+		padding: 27px 15px;
+		@include flexbox();
+		@include justify-content(space-between);
+
+		@include responsive(map-get($breakpoints, ipad)) { padding: 16px 10px; }
+
+		li {
+			width: calc(100% / 5);
+			padding-right: 10px;
+			color: map-get($colors , primary);
+			font-size: 17px;
+			word-break: break-word;
+
+			@include responsive(map-get($breakpoints, ipad)) { font-size: 14px; }
+		}
+	}
+
+	.filter {
+		overflow-x: auto;
+
+		.wrap {
+			@include responsive(map-get($breakpoints, iphone)) { width: 170%; }
+			@include responsive(map-get($breakpoints, iphone-potrait)) { width: 210%; }
+		}
+
+		.header {
+			@extend %list;
+			background-color: map-get($colors , grey-dark);
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -o-sticky;
+      position: -ms-sticky;
+      position: sticky;
+      top: 0;
+
+			li { font-weight: bold; }
+		}
+	}
+
+  .result {
+		ul { @extend %list;	}
+	}
+
+  .results {
+    height: 500px;
+  }
+}
