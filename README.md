@@ -1,4 +1,4 @@
-# covid-task
+# Covid Task
 
 ## command for sass
 1. cd assets/

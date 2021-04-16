@@ -6,7 +6,7 @@
   <title>Covid Results</title>
   <meta name="description" lang="en" content="This page will show covide results according to the country" />
   <meta name="keywords" lang="en" content="covid, results" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" media="screen" href="assets/css/style.css" />
@@ -26,25 +26,23 @@
     <main>
       <section class="filter-section">
         <div class="wrapper">
-          <select name="country-list" id="countries">
-            <option value="nothing">Select Country</option>
-            <option value="india">India</option>
-            <option value="south-africa">South Africa</option>
-          </select>
           <!-- filter division starts here -->
           <div class="filter">
-            <div class="wrap">
-              <ul class="header">
+            <div class="header-container">
+              <select class="country-list" id="countries">
+                <option value="nothing">Select Country</option>
+              </select>
+              <ul class="header" id="resultHeader">
                 <li>Confirmed</li>
                 <li>Deaths</li>
                 <li>Recovered</li>
                 <li>Active</li>
                 <li>Date</li>
               </ul>
-              <img src="./assets/images/loader.gif" alt="Loader" class="loader hide" id="loaderGif">
-              <span class="message hide" id="resultMessage">No Results Found</span>
-              <ul class="results" id="results"></ul>
             </div>
+            <img src="./assets/images/loader.gif" alt="Loader" class="loader hide" id="loaderGif">
+            <span class="message hide" id="resultMessage">No Results Found</span>
+            <ul class="results" id="results"></ul>
           </div>
           <!-- filter division ends here -->
         </div>

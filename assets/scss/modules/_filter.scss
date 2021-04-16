@@ -1,39 +1,56 @@
 .filter-section {
+  .country-list {
+    width: 200px;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 2px solid map-get($colors , primary);
+    background: map-get($colors , orange);
+    font-size: 17px;
+    outline: none;
+
+    @include responsive(map-get($breakpoints, ipad)) { font-size: 14px; }
+    @include responsive(map-get($breakpoints, iphone-potrait)) { font-size: 12px; }
+  }
+
   %list {
 		padding: 27px 15px;
 		@include flexbox();
 		@include justify-content(space-between);
 
 		@include responsive(map-get($breakpoints, ipad)) { padding: 16px 10px; }
+    @include responsive(map-get($breakpoints, iphone-potrait)) { padding: 16px 8px; }
 
 		li {
 			width: calc(100% / 5);
 			padding-right: 10px;
-			color: map-get($colors , primary);
 			font-size: 17px;
 			word-break: break-word;
 
 			@include responsive(map-get($breakpoints, ipad)) { font-size: 14px; }
+
+      @include responsive(map-get($breakpoints, iphone-potrait)) { 
+        padding-right: 5px;
+        font-size: 10px; 
+      }
 		}
 	}
 
 	.filter {
-		overflow-x: auto;
-
-		.wrap {
-			@include responsive(map-get($breakpoints, iphone)) { width: 170%; }
-			@include responsive(map-get($breakpoints, iphone-potrait)) { width: 210%; }
-		}
-
-		.header {
-			@extend %list;
-			background-color: map-get($colors , grey-dark);
+    .header-container {
       position: -webkit-sticky;
       position: -moz-sticky;
       position: -o-sticky;
       position: -ms-sticky;
       position: sticky;
       top: 0;
+      background-image: linear-gradient(to right, map-get($colors , yellow), map-get($colors , orange));
+    }
+
+		.header {
+			@extend %list;
+      width: 100%;
+      border: 1px solid map-get($colors , primary);
+      background-color: map-get($colors , yellow);
 
 			li { font-weight: bold; }
 		}
@@ -43,7 +60,20 @@
 		ul { @extend %list;	}
 	}
 
-  .results {
-    height: 500px;
+  .message {
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+
+    &.hide { display: none; }
+  }
+
+  .loader {
+    width: 50px;
+    margin: 30px auto 0;
+    display: block;
+
+    &.hide { display: none; }
   }
 }

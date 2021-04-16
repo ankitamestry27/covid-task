@@ -58,34 +58,39 @@ body {
     body {
       background-color: #fff; } }
   body * {
-    font-family: sans-serif; }
+    font-family: sans-serif;
+    color: #000; }
 
 .container {
   max-width: 1100px;
+  min-height: 100vh;
   width: 90%;
   padding: 45px 0;
+  border: 1px solid #000;
   margin: 20px auto;
-  background-color: #fff; }
+  background-image: linear-gradient(to right, #fcd261, #f56c2a); }
   @media only screen and (max-width: 995px) {
     .container {
       width: 97%; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 767px) {
     .container {
       width: 100%;
-      margin: 0 auto;
-      padding-bottom: 80px; } }
+      padding-bottom: 80px;
+      border: none;
+      margin: 0 auto; } }
 
 .wrapper {
   width: 93%;
   margin: 0 auto; }
   @media only screen and (max-width: 480px) {
     .wrapper {
-      width: 90%; } }
+      width: 95%; } }
 
 a {
   text-decoration: none; }
 
 h1 {
+  margin-bottom: 40px;
   font-size: 52px;
   font-weight: bold; }
   @media only screen and (max-width: 995px) {
@@ -93,31 +98,26 @@ h1 {
       font-size: 40px; } }
   @media only screen and (max-width: 480px) {
     h1 {
+      margin-bottom: 25px;
       font-size: 32px; } }
-
-h2 {
-  font-size: 23px;
-  font-weight: bold; }
-  @media only screen and (max-width: 995px) {
-    h2 {
-      font-size: 20px; } }
 
 .hide {
   display: none; }
 
-::-webkit-scrollbar {
-  width: 10px;
-  background: #e0e0e0; }
-
-::-webkit-scrollbar-track {
-  border-radius: 15px; }
-
-::-webkit-scrollbar-thumb {
-  border-radius: 15px;
-  background: #d3d3d3;
-  -webkit-box-shadow: inset 0 0 6px #000;
-  box-shadow: inset 0 0 6px #000; }
-
+.filter-section .country-list {
+  width: 200px;
+  padding: 10px;
+  margin: 5px 0 20px;
+  border: 2px solid #000;
+  background: #f56c2a;
+  font-size: 17px;
+  outline: none; }
+  @media only screen and (max-width: 995px) {
+    .filter-section .country-list {
+      font-size: 14px; } }
+  @media only screen and (max-width: 480px) {
+    .filter-section .country-list {
+      font-size: 12px; } }
 .filter-section .filter .header, .filter-section .result ul {
   padding: 27px 15px;
   display: -webkit-box;
@@ -133,34 +133,47 @@ h2 {
   @media only screen and (max-width: 995px) {
     .filter-section .filter .header, .filter-section .result ul {
       padding: 16px 10px; } }
+  @media only screen and (max-width: 480px) {
+    .filter-section .filter .header, .filter-section .result ul {
+      padding: 16px 8px; } }
   .filter-section .filter .header li, .filter-section .result ul li {
     width: calc(100% / 5);
     padding-right: 10px;
-    color: #000;
     font-size: 17px;
     word-break: break-word; }
     @media only screen and (max-width: 995px) {
       .filter-section .filter .header li, .filter-section .result ul li {
         font-size: 14px; } }
-.filter-section .filter {
-  overflow-x: auto; }
-  @media only screen and (max-width: 767px) {
-    .filter-section .filter .wrap {
-      width: 170%; } }
-  @media only screen and (max-width: 480px) {
-    .filter-section .filter .wrap {
-      width: 210%; } }
-  .filter-section .filter .header {
-    background-color: #e7e7e7;
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -o-sticky;
-    position: -ms-sticky;
-    position: sticky;
-    top: 0; }
-    .filter-section .filter .header li {
-      font-weight: bold; }
-.filter-section .results {
-  height: 500px; }
+    @media only screen and (max-width: 480px) {
+      .filter-section .filter .header li, .filter-section .result ul li {
+        padding-right: 5px;
+        font-size: 10px; } }
+.filter-section .filter .header-container {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(to right, #fcd261, #f56c2a); }
+.filter-section .filter .header {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #fcd261; }
+  .filter-section .filter .header li {
+    font-weight: bold; }
+.filter-section .message {
+  display: block;
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center; }
+  .filter-section .message.hide {
+    display: none; }
+.filter-section .loader {
+  width: 50px;
+  margin: 30px auto 0;
+  display: block; }
+  .filter-section .loader.hide {
+    display: none; }
 
 /*# sourceMappingURL=style.css.map */
